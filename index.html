@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8e9e9">
+  <meta name="description" content="เรื่องราวเล็ก ๆ สำหรับวันครบรอบของเรา">
+  <title>Our Little Story ❤️</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#anniversary">ข้ามไปยังเนื้อหา</a>
+  <div class="floating-hearts" aria-hidden="true"></div>
+
+  <header id="welcome" class="welcome" aria-labelledby="welcome-title">   
+    <div class="welcome-overlay" aria-hidden="true"></div>
+    <div class="welcome-content">
+      <span class="eyebrow">OUR ANNIVERSARY STORY</span>
+      <div class="heart-seal" aria-hidden="true">♥</div>
+      <h1 id="welcome-title">มีของขวัญเล็ก ๆ<br>ที่พี่ตั้งใจทำให้หนู <span aria-hidden="true">♡</span></h1>
+      <p>มันอาจไม่ใช่ของขวัญที่แพงหรือมีค่าอะไร<br>แต่พี่ตั้งใจทำให้หนูนะ</p>
+      <button id="startButton" class="button button-primary button-large" type="button">
+        เริ่มเปิดความทรงจำของเรา <span aria-hidden="true">→</span>
+      </button>
+      <p class="welcome-hint">เปิดเสียงไว้เบา ๆ แล้วค่อย ๆ ดูไปด้วยกันนะ</p>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </header>
+
+  <main id="mainContent">
+    <section id="anniversary" class="section anniversary-section" aria-labelledby="anniversary-title">
+      <div class="container narrow center reveal">
+        <span class="section-number">01</span>
+        <p class="section-kicker">นับจากวันแรกจนถึงวันนี้</p>
+        <h2 id="anniversary-title">HAPPY ANNIVERSARY นะหนู <span aria-hidden="true">♡</span></h2>
+        <p class="lead">ตั้งแต่วันที่หนูเข้ามา<br>หลายวันที่เคยธรรมดาของพี่ก็เริ่มมีความหมายมากขึ้น</p>
+        <div class="counter-grid" aria-label="ระยะเวลาที่คบกัน">
+          <div class="counter-card"><strong id="yearsCount">0</strong><span>ปี</span></div>
+          <div class="counter-card"><strong id="monthsCount">0</strong><span>เดือน</span></div>
+          <div class="counter-card"><strong id="daysCount">0</strong><span>วัน</span></div>
+        </div>
+        <p id="totalDaysText" class="total-days">เราเดินทางมาด้วยกันแล้ว <strong>0</strong> วัน</p>
+        <p class="anniversary-note">ไม่ว่าจะผ่านมากี่วัน<br>พี่ก็ยังดีใจเสมอที่คนที่เดินอยู่ข้างพี่คือหนู</p>
+        <div class="ornament" aria-hidden="true"><span></span>♥<span></span></div>
+      </div>
+    </section>
+
+    <section id="puzzle" class="section puzzle-section" aria-labelledby="puzzle-title">
+      <div class="container reveal">
+        <div class="section-heading center">
+          <span class="section-number">02</span>
+          <p class="section-kicker">ชิ้นส่วนแรกของเรื่องราว</p>
+          <h2 id="puzzle-title"><b>ก่อนจะเปิดดูของขวัญทั้งหมด</b></h2>
+          <p>พี่อยากให้หนูเล่นเกมส์เล็กๆก่อนกว่าจะเป็น <b>เรา</b> ก็ผ่านก่อนต่อเรื่องราวแบบนี้มาเหมือนกันนะ🧩</p>
+        </div>
+
+        <div class="puzzle-layout">
+          <aside class="puzzle-copy glass-card">
+            <span class="tiny-label">HOW TO PLAY</span>
+            <h3>ค่อย ๆ ประกอบคำว่าเรา</h3>
+            <p>ทุกชิ้นในภาพนี้ เหมือนกับทุกช่วงเวลาที่ค่อย ๆ ประกอบกันจนกลายเป็นคำว่าเรา</p>
+            <p class="puzzle-instruction">ลากเพื่อสลับ หรือแตะสองชิ้นบนมือถือ</p>
+            <div class="puzzle-stats" aria-live="polite">
+              <div><span>ขยับ</span><strong id="moveCount">0</strong><small>ครั้ง</small></div>
+              <div><span>เวลา</span><strong id="timer">00:00</strong><small>นาที</small></div>
+            </div>
+            <div class="button-row">
+              <button id="resetPuzzle" class="button button-secondary" type="button">↻ เริ่มใหม่</button>
+              <button id="previewButton" class="button button-ghost" type="button">◉ ดูรูปต้นฉบับ</button>
+            </div>
+          </aside>
+
+          <div class="puzzle-board-wrap">
+            <div id="puzzleBoard" class="puzzle-board" role="group" aria-label="เกมต่อภาพ 3 คูณ 3"></div>
+            <p id="puzzleFeedback" class="sr-status" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div id="puzzleSuccess" class="success-card glass-card" hidden>
+          <span class="success-icon" aria-hidden="true">♥</span>
+          <h3>เก่งมากไอดื้อของพี่ ❤️</h3>
+          <p>บางชิ้นอาจวางยาก บางช่วงเวลาอาจไม่สมบูรณ์แบบ<br>แต่สุดท้ายทุกอย่างก็ประกอบกันจนกลายเป็นภาพที่พี่ชอบที่สุด</p>
+          <p><strong>ขอบคุณนะ ที่เข้ามาเป็นชิ้นส่วนสำคัญในชีวิตของพี่</strong></p>
+          <button id="continueButton" class="button button-primary" type="button">เปิดดูเรื่องราวของเราต่อ →</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="unlockedStory" class="locked-content" hidden>
+      <section id="memories" class="section memories-section" aria-labelledby="memories-title">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="section-number">03</span>
+            <p class="section-kicker">Our memory album</p>
+            <h2 id="memories-title">พี่ชอบเสมอเวลาที่มีหนูอยู่ด้วยนะ❤️</h2>
+            <p>พี่อาจจำวันที่หรือรายละเอียดเล็ก ๆ ไม่ได้ครบทุกอย่าง<br>แต่พี่จำได้เสมอว่า ในช่วงเวลาเหล่านั้นพี่มีความสุขแค่ไหนที่มีหนูอยู่ด้วย</p>
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </div>
+      </section>
+
+      <section id="quiz" class="section quiz-section" aria-labelledby="quiz-title">
+        <div class="container narrow">
+          <div class="section-heading center reveal">
+            <span class="section-number">04</span>
+            <p class="section-kicker">Do you remember?</p>
+            <h2 id="quiz-title">มาดูกันว่าหนูจำเรื่องของเราได้มากแค่ไหน 😊</h2>
+            <p>ไม่เป็นไรถ้าตอบผิด เพราะต่อให้จำรายละเอียดไม่ได้ทุกอย่าง<br>พี่ก็ยังอยากสร้างความทรงจำใหม่กับหนูอยู่ดี</p>
+          </div>
+          <div class="quiz-card glass-card reveal">
+            <div class="quiz-progress-head"><span id="quizProgressLabel">คำถาม 1 จาก 3</span><strong id="quizPercent">0%</strong></div>
+            <div class="progress-track"><span id="quizProgressBar"></span></div>
+            <div id="quizContent"></div>
+            <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <div id="afterQuiz" hidden>
+        <section id="reasons" class="section reasons-section" aria-labelledby="reasons-title">
+          <div class="container">
+            <div class="section-heading center reveal">
+              <span class="section-number">05</span>
+              <p class="section-kicker">Eight honest reasons</p>
+              <h2 id="reasons-title">เหตุผลที่พี่ยังเลือกหนูในทุก ๆ วัน</h2>
+              <p>จริง ๆ แล้วมีมากกว่านี้เยอะมาก<br>แต่พี่คงเขียนทั้งหมดลงในหน้าเดียวไม่หมด</p>
+            </div>
+            <div id="reasonCards" class="reason-grid"></div>
+            <p id="reasonFinalMessage" class="reason-final" hidden>ขอบคุณที่เป็นหนูในแบบที่หนูเป็นนะ ❤️</p>
+          </div>
+        </section>
+
+        <section id="letter" class="section letter-section" aria-labelledby="letter-title">
+          <div class="container narrow center">
+            <div class="section-heading reveal">
+              <span class="section-number">06</span>
+              <p class="section-kicker">A letter from my heart</p>
+              <h2 id="letter-title">จดหมายถึงหนู</h2>
+            </div>
+            <button id="envelope" class="envelope" type="button" aria-label="เปิดจดหมายที่พี่อยากให้หนูอ่าน" aria-expanded="false">
+              <span class="envelope-back"></span>
+              <span class="letter-paper"><span id="typedLetter"></span></span>
+              <span class="envelope-front"></span>
+              <span class="envelope-flap"></span>
+              <span class="envelope-seal" aria-hidden="true">♥</span>
+              <span class="envelope-label">จดหมายที่พี่อยากให้หนูอ่าน</span>
+            </button>
+            <p id="letterHint" class="letter-hint">แตะที่ซองเพื่อเปิดอ่าน</p>
+            <div id="letterControls" class="button-row center" hidden>
+              <button id="showFullLetter" class="button button-secondary" type="button">แสดงข้อความทั้งหมด</button>
+              <button id="replayLetter" class="button button-ghost" type="button">↻ อ่านอีกครั้ง</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer><p>ทำด้วยความตั้งใจทั้งหมดของ <strong>พี่</strong> เพื่อ <strong id="footerPartner">หนู</strong> <span aria-hidden="true">♥</span></p></footer>
+
+  <button id="musicToggle" class="music-toggle" type="button" aria-label="เปิดหรือปิดเพลง" aria-pressed="false">
+    <span class="music-icon" aria-hidden="true">♪</span>
+    <span id="musicStatus">เปิดเพลง</span>
+  </button>
+  <div id="youtubeAudioPlayer" aria-hidden="true"></div>
+
+  <div id="previewModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-content">
+      <button id="closeModal" class="modal-close" type="button" aria-label="ปิดภาพตัวอย่าง">×</button>
+      <p id="modalTitle" class="tiny-label">รูปความทรงจำของเรา</p>
+      <img id="previewImage" src="imge/01-puzzle.jpg" alt="รูปต้นฉบับสำหรับเกมจิ๊กซอว์">
+    </div>
+  </div>
+  <div id="effectsLayer" class="effects-layer" aria-hidden="true"></div>
+</body>
+</html>
